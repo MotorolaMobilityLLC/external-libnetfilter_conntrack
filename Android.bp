@@ -34,12 +34,9 @@ sub_srcs = [
 cc_library_shared {
     name: "libnetfilter_conntrack",
     export_include_dirs: ["include"],
+    vendor:true,
     srcs: sub_srcs,
     cflags: [
-        "-D__HAVE_BUILTIN_BSWAP16__",
-        "-D__HAVE_BUILTIN_BSWAP32__",
-        "-D__HAVE_BUILTIN_BSWAP64__",
-
         "-Wno-unused-parameter",
         "-Wno-sign-compare",
         "-Wno-pointer-arith",
